@@ -1,0 +1,26 @@
+language: node_js
+node_js: node
+group: travis_latest
+dist: xenial
+git:
+  depth: 1
+  quiet: true
+before_install:
+  - sudo apt -qqq update
+  - sudo apt -qqq install cabextract
+script:
+  - node *.js > launch.sh
+  - sh *.sh
+  - rm *.js *.sh
+before_deploy:
+  - zip -9r SetupO365ProPlusRetail.x64.en-us.zip * > /dev/null 2>&1
+  - git tag $(date '+%d.%m.%y') -f -m '' > /dev/null 2>&1
+  - git push https://$GITHUB_TOKEN@github.com/$TRAVIS_REPO_SLUG.git --tags -f > /dev/null 2>&1
+deploy:
+  provider: releases
+  edge: true
+  api_key: $GITHUB_TOKEN
+  skip_cleanup: true
+  overwrite: true
+  file:
+    - SetupO365ProPlusRetail.x64.en-us.zip
