@@ -11,10 +11,9 @@ https.get('https://mrodevicemgr.edog.officeapps.live.com/mrodevicemgrsvc/api/v2/
 mkdir ClickToRun
 
 wget http://officecdn.microsoft.com.edgesuite.net/pr/${id}/Office/Data/${ver}/i640.cab -P ClickToRun > /dev/null 2>&1
-wget http://officecdn.microsoft.com.edgesuite.net/pr/${id}/Office/Data/${ver}/i641033.cab -P ClickToRun > /dev/null 2>&1
 
-cabextract ClickToRun/i640.cab ClickToRun/i641033.cab -d ClickToRun > /dev/null 2>&1
-rm ClickToRun/i640.cab ClickToRun/i641033.cab
+cabextract ClickToRun/i640.cab -d ClickToRun > /dev/null 2>&1
+rm ClickToRun/i640.cab
 
 {
     echo '@echo off'
