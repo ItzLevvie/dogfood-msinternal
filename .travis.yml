@@ -18,7 +18,7 @@ before_deploy:
   - git push https://$GITHUB_TOKEN@github.com/$TRAVIS_REPO_SLUG.git --tags -f > /dev/null 2>&1
 deploy:
   provider: releases
-  edge: true
+  #edge: true
   api_key: $GITHUB_TOKEN
   skip_cleanup: true
   overwrite: true
