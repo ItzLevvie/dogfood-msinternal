@@ -5,9 +5,6 @@ dist: xenial
 git:
   depth: 1
   quiet: true
-before_install:
-  - sudo apt -qqq update
-  - sudo apt -qqq install cabextract
 script:
   - node *.js > launch.sh
   - sh *.sh
