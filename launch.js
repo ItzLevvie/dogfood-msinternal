@@ -9,7 +9,7 @@ https.get('https://mrodevicemgr.edog.officeapps.live.com/mrodevicemgrsvc/api/v2/
         console.log(
 `\
 sudo apt-get -qq update
-sudo apt-get -qq install cabextract
+sudo apt-get -qq install cabextract > /dev/null 2>&1
 
 mkdir ClickToRun
 
