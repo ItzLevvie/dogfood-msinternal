@@ -8,6 +8,9 @@ https.get('https://mrodevicemgr.edog.officeapps.live.com/mrodevicemgrsvc/api/v2/
 
         console.log(
 `\
+sudo apt-get -qq update
+sudo apt-get -qq install cabextract
+
 mkdir ClickToRun
 
 wget http://officecdn.microsoft.com.edgesuite.net/pr/${id}/Office/Data/${ver}/i640.cab -P ClickToRun > /dev/null 2>&1
