@@ -1,7 +1,7 @@
 @echo off
 
 :architecture
-echo Choose what architecture you want to download:
+echo Choose what architecture you want your product to be in:
 echo [1] 64-bit
 echo [2] 32-bit
 echo.
@@ -21,7 +21,7 @@ if %option% == 1 (
 )
 
 :language
-echo Choose what language you want to download:
+echo Choose what language you want your product to be in:
 echo [1] English
 echo.
 
@@ -58,7 +58,7 @@ if %option% == 1 (
 )
 
 :branch
-echo Choose what branch you want to download:
+echo Choose what branch you want your product to be in:
 echo [1] Dogfood::DevMain
 echo [2] Dogfood::CC
 echo [3] Dogfood::FRDC
