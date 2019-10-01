@@ -137,10 +137,10 @@ if %option% == 1 (
 
 :setup
 if not exist "%CommonProgramFiles%\microsoft shared\ClickToRun\OfficeClickToRun.exe" (
-  robocopy %~dp0ClickToRun "%CommonProgramFiles%\microsoft shared\ClickToRun" > nul 2>&1
+    robocopy %~dp0ClickToRun "%CommonProgramFiles%\microsoft shared\ClickToRun" > nul 2>&1
 )
 if exist "%CommonProgramFiles%\microsoft shared\ClickToRun\OfficeClickToRun.exe" (
-  start "" "%CommonProgramFiles%\microsoft shared\ClickToRun\OfficeClickToRun.exe" deliverymechanism=%branch% platform=%architecture% culture=%language% productstoadd=%product%.16_%language%_x-none %product%.excludedapps.16=groove,onenote updatesenabled.16=True cdnbaseurl.16=http://officecdn.microsoft.com/pr/%branch% version.16=%build% mediatype.16=CDN baseurl.16=http://officecdn.microsoft.com/pr/%branch%
+    start "" "%CommonProgramFiles%\microsoft shared\ClickToRun\OfficeClickToRun.exe" deliverymechanism=%branch% platform=%architecture% culture=%language% productstoadd=%product%.16_%language%_x-none %product%.excludedapps.16=groove,onenote updatesenabled.16=True cdnbaseurl.16=http://officecdn.microsoft.com/pr/%branch% version.16=%build% mediatype.16=CDN baseurl.16=http://officecdn.microsoft.com/pr/%branch%
 )
 
 pause
