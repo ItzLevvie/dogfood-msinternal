@@ -41,6 +41,7 @@ if %option% == 1 (
 echo Choose what product you want to download:
 echo [1] Office 365 Home
 echo [2] Office 365 ProPlus
+echo [3] Office 365 Business
 echo.
 
 set /p option="Choose an option: "
@@ -51,6 +52,8 @@ if %option% == 1 (
     set product=O365HomePremRetail
 ) else if %option% == 2 (
     set product=O365ProPlusRetail
+) else if %option% == 3 (
+    set product=O365BusinessRetail
 ) else (
     echo You have chosen an invalid option: %option%
     echo.
