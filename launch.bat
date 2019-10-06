@@ -90,13 +90,13 @@ echo.
 
 if %option% == 1 (
     set branch=ea4a4090-de26-49d7-93c1-91bff9e53fc3
-    set build=16.0.12127.20002
+    set build=16.0.12204.20000
 ) else if %option% == 2 (
     set branch=f3260cf1-a92c-4c75-b02e-d64c0a86a968
-    set build=16.0.12130.20018
+    set build=16.0.12130.20074
 ) else if %option% == 3 (
     set branch=834504cc-dc55-4c6d-9e71-e024d0253f6d
-    set build=16.0.11929.20378
+    set build=16.0.11929.20384
 ) else if %option% == 4 (
     set branch=c4a7726f-06ea-48e2-a13a-9d78849eb706
     set build=16.0.10730.20386
