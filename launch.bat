@@ -90,13 +90,13 @@ echo.
 
 if %option% == 1 (
     set branch=ea4a4090-de26-49d7-93c1-91bff9e53fc3
-    set build=16.0.12221.20012
+    set build=16.0.12228.20002
 ) else if %option% == 2 (
     set branch=f3260cf1-a92c-4c75-b02e-d64c0a86a968
-    set build=16.0.12130.20222
+    set build=16.0.12228.20016
 ) else if %option% == 3 (
     set branch=834504cc-dc55-4c6d-9e71-e024d0253f6d
-    set build=16.0.11929.20414
+    set build=16.0.11929.20424
 ) else if %option% == 4 (
     set branch=c4a7726f-06ea-48e2-a13a-9d78849eb706
     set build=16.0.10730.20386
@@ -105,7 +105,7 @@ if %option% == 1 (
     set build=16.0.12215.20006
 ) else if %option% == 6 (
     set branch=5462eee5-1e97-495b-9370-853cd873bb07
-    set build=16.0.12130.20210
+    set build=16.0.12130.20272
 ) else if %option% == 7 (
     set branch=9a3b7ff2-58ed-40fd-add5-1e5158059d1c
     set build=16.0.11929.20396
@@ -120,7 +120,7 @@ if %option% == 1 (
     set build=16.0.12215.20006
 ) else if %option% == 11 (
     set branch=64256afe-f5d9-4f86-8936-8840a6a4f5be
-    set build=16.0.12130.20210
+    set build=16.0.12130.20272
 ) else if %option% == 12 (
     set branch=b8f9b850-328d-4355-9145-c59439a0c4cf
     set build=16.0.11929.20396
