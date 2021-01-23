@@ -5,7 +5,7 @@ const https = require("https");
 const getBranch = "Dogfood_DevMain";
 const getFFN = "ea4a4090-de26-49d7-93c1-91bff9e53fc3";
 
-const getBuild = "16.0.13714.20000";
+const getBuild = "16.0.13721.20006";
 
 function print(getBranch, getFFN, getBuild) {
     console.log("sudo apt update > /dev/null 2>&1");
