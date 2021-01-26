@@ -2,6 +2,8 @@ name: dogfood-msinternal (prod)
 
 on:
   push:
+    branches:
+      - master
   schedule:
     - cron: "*/5 * * * *"
 
