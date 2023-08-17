@@ -1,26 +1,31 @@
 name: dogfood-msinternal (prod)
-
 on:
   push:
-    branches:
-      - master
+    branches: [ "master" ]
   schedule:
-    - cron: "*/5 * * * *"
+    - cron:  '0 03 * * 1-5'
 
 jobs:
   build:
-    runs-on: ubuntu-20.04
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [20.5.1]
+
     steps:
-      - uses: actions/checkout@v2.3.4
-
-      - uses: actions/setup-node@v2.1.5
-        with:
-          node-version: 16.0.0
-
-      - run: |
+    - uses: actions/checkout@v3
+    
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        
+    - run: |
           node launch.js > launch.sh
           sh launch.sh
 
-      - uses: actions/upload-artifact@v2.2.3
-        with:
-          path: Dogfood_DevMain_*_x64_O365ProPlusRetail_en-us.zip
+    - uses: actions/upload-artifact@v3.1.2
+      with:
+       path: Dogfood_DevMain_*_x64_O365ProPlusRetail_en-us.zip
